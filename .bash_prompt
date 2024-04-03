@@ -9,4 +9,4 @@ function markerStatus {
 	[ $? -eq 0 ] && echo 37 || echo 31
 }
 
-export PS1="\n${GRAY}┬─( ${BOLD}${GREEN}\w\n${RESET}${GREY}└[${BLUE}\t${GREY}]\[\e[\$(markerStatus)m\]${MARKER}${GREY}$ ${RESET}"
+export PS1="\n${GREY}┬─( ${BOLD}${GREEN}\w\n${RESET}${GREY}└[${BLUE}\t${GREY}]\[\e[\$(markerStatus)m\]${MARKER}${GREY}$ ${RESET}"
