@@ -11,7 +11,9 @@ function markerStatus {
 }
 
 function getVenv {
+	rc=$? # preserve exit status
 	[ ! -z "${VIRTUAL_ENV}" ] && echo "${VIRTUAL_ENV/#*\//}:" || echo ''
+	return $rc
 }
 
 export PS1="\n${GREY}┬─(${YELLOW}\[\$(getVenv)\] ${BOLD}${GREEN}\w\n${RESET}${GREY}└[${BLUE}\t${GREY}]\[\e[\$(markerStatus)m\]${MARKER}${GREY}$ ${RESET}"
